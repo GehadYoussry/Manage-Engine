@@ -1,6 +1,6 @@
 ## Introduction
 This project, related to a ticketing system called ManageEngine, has some issues that need to be resolved by data analysts to facilitate reports and analysis.
-## How did we make the data:
+## Steps For Data Creation and Management:
 Let's imagine we have two tables: the first table shows which group resolved each ticket, while the second table contains details about the specialists who responded to each ticket.
 ## Let's Create the First Table:
 ```sql
@@ -82,7 +82,7 @@ ORDER BY
 - **ResponseCounts:** Counts total responses per ticket by team and agent.
 - **UniqueRespondents:** Identifies tickets with responses from more than one unique agent.
 - **Final Query:** Combines the results to show response counts for tickets with multiple unique respondents.
-### These queries provide a comprehensive view of ticket response activity, highlighting tickets with multiple agents' involvement.
+  
 
 
 
