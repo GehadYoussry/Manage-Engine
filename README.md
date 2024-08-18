@@ -1,8 +1,8 @@
-# Introduction
+## Introduction
 This project, related to a ticketing system called ManageEngine, has some issues that need to be resolved by data analysts to facilitate reports and analysis.
-# How did we make the data:
+## How did we make the data:
 Let's imagine we have two tables: the first table shows which group resolved each ticket, while the second table contains details about the specialists who responded to each ticket.
-# Let's Create the First Table:
+## Let's Create the First Table:
 ```sql
 CREATE TABLE Tickets (
     TicketID INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -17,7 +17,7 @@ INSERT INTO Tickets (Team, AgentName, CreatedDate, ResolvedDate) VALUES
 ('Payin', 'Charlie', '2024-08-03', '2024-08-05'),
 ('Admin', 'David', '2024-08-01', '2024-08-04');
 ```
-# Creating the second table:
+## Creating the second table:
 ```sql
 CREATE TABLE Responses (
     ResponseID INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -36,7 +36,7 @@ INSERT INTO Responses (TicketID, ResponseText, ResponseDate) VALUES
 (4, 'Client provided additional information.', '2024-08-02'),
 (4, 'Issue resolved and confirmed with the client.', '2024-08-04');
 ```
-# Combining The Two Queries:
+## Combining The Two Queries:
 ```sql
 WITH ResponseCounts AS (
     SELECT 
@@ -78,11 +78,11 @@ ORDER BY
     rc.Team, rc.AgentName, rc.TicketID;
 
 ```
-# Summary:
+## Summary:
 - **ResponseCounts:** Counts total responses per ticket by team and agent.
 - **UniqueRespondents:** Identifies tickets with responses from more than one unique agent.
 - **Final Query:** Combines the results to show response counts for tickets with multiple unique respondents.
-# These queries provide a comprehensive view of ticket response activity, highlighting tickets with multiple agents' involvement.
+## These queries provide a comprehensive view of ticket response activity, highlighting tickets with multiple agents' involvement.
 
 
 
